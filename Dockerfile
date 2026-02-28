@@ -26,6 +26,6 @@ COPY --from=css /src/static/ static/
 COPY static/ static/
 COPY templates/ templates/
 
-EXPOSE 8080
-ENV PORT=8080
+EXPOSE 80
+ENV PORT=80
 CMD ["./server"]
