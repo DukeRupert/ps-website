@@ -1,0 +1,10 @@
+bin/
+tmp/
+node_modules/
+.git/
+.air.toml
+.env
+.env.local
+.DS_Store
+.idea/
+.vscode/

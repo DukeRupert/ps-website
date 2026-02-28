@@ -1,0 +1,239 @@
+{{ define "content" }}
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- HERO                                                       -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="relative min-h-[90vh] flex items-center bg-timber overflow-hidden">
+  <!-- Background gradient (placeholder for hero photo) -->
+  <div class="absolute inset-0 bg-gradient-to-br from-timber via-timber-mid to-timber-lt opacity-90"></div>
+  <div class="absolute inset-0 bg-gradient-to-t from-timber/80 via-transparent to-timber/40"></div>
+
+  <div class="relative z-10 max-w-[1100px] mx-auto px-5 md:px-10 py-32 md:py-40 w-full">
+    <div class="max-w-2xl">
+      <h1 class="font-display font-extrabold text-cream leading-[1.05]" style="font-size: clamp(36px, 5vw, 64px);">
+        Your clients pay $500&nbsp;a&nbsp;day. Your website should look like&nbsp;it.
+      </h1>
+      <p class="mt-6 text-sand-dk font-body text-lg md:text-xl leading-relaxed max-w-xl">
+        Custom-built websites for Montana outfitters and guides. Fast, mobile-first, and designed to turn browsers into booked trips.
+      </p>
+
+      <!-- Hero Email Signup -->
+      <div class="mt-10">
+        <p class="section-label text-copper mb-4">Get notified when we launch</p>
+        <form
+          hx-post="https://broadwave.fireflysoftware.dev/api/subscribe"
+          hx-swap="outerHTML"
+          class="flex flex-col sm:flex-row gap-3 max-w-md"
+        >
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="Your email"
+            class="form-input flex-1"
+          >
+          <input type="hidden" name="list" value="packstring">
+          <!-- Honeypot -->
+          <div style="position:absolute;left:-9999px;" aria-hidden="true">
+            <input type="text" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <button type="submit" class="btn btn-primary">Keep Me Posted</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- THE PROBLEM                                                -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="problem" class="bg-sand scroll-mt-20">
+  <div class="max-w-[1100px] mx-auto section-padding">
+    <div class="max-w-2xl reveal">
+      <p class="section-label text-copper mb-6">The Problem</p>
+      <h2 class="font-display font-extrabold text-ink leading-tight mb-8" style="font-size: clamp(26px, 3.5vw, 42px);">
+        A $5,000 experience from a $50&nbsp;website.
+      </h2>
+      <div class="space-y-6 text-ink-mid font-body leading-[1.7]">
+        <p>
+          A family in Connecticut is planning next summer right now. They're comparing three outfitters on their phones. Same price range. Same trip type. One site loads fast, shows real photos, and lets them send an inquiry at midnight. The other two look like they were built during the Obama administration.
+        </p>
+        <p class="font-display font-bold text-ink text-lg">
+          Which one do they book?
+        </p>
+        <p>
+          Most outfitter websites were built on WordPress five or ten years ago. The nav is a maze. The photos are slow. There's no way to check availability or send an inquiry without calling. On a phone, it barely works. Meanwhile, you're running a $5,000 experience out of a $50 website.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- WHAT PACKSTRING IS — FEATURES                              -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="features" class="bg-cream scroll-mt-20">
+  <div class="max-w-[1100px] mx-auto section-padding">
+    <div class="max-w-2xl mb-12 reveal">
+      <p class="section-label text-copper mb-6">What Packstring Is</p>
+      <h2 class="font-display font-extrabold text-ink leading-tight mb-4" style="font-size: clamp(26px, 3.5vw, 42px);">
+        A website built for how outfitters actually work.
+      </h2>
+      <p class="text-ink-mid font-body leading-[1.7]">
+        Packstring is a custom-built website package for Montana hunting and fishing outfitters. Not a template. Not a page builder. Not a marketplace that takes a cut of your bookings.
+      </p>
+      <p class="font-display font-bold text-saddle mt-4 text-lg">
+        Your site. Your brand. Your bookings.
+      </p>
+    </div>
+
+    <!-- Feature Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-0.5 bg-sand-dk rounded-[4px] overflow-hidden">
+
+      <div class="bg-cream p-8 reveal">
+        <h3 class="font-display font-bold text-ink text-lg mb-3">A fast, mobile-first website</h3>
+        <p class="text-ink-mid font-body text-[15px] leading-[1.7]">
+          Custom-built, not a theme. Loads in under two seconds. Looks as good on a phone as it does on a desktop. Because that's where your clients are browsing.
+        </p>
+      </div>
+
+      <div class="bg-cream p-8 reveal">
+        <h3 class="font-display font-bold text-ink text-lg mb-3">Trip pages with real pricing</h3>
+        <p class="text-ink-mid font-body text-[15px] leading-[1.7]">
+          Every trip type gets its own section with photos, descriptions, what's included, duration, and pricing. No burying the rates three clicks deep. Tourists comparing guides book the one who makes it easy.
+        </p>
+      </div>
+
+      <div class="bg-cream p-8 reveal">
+        <h3 class="font-display font-bold text-ink text-lg mb-3">A seasonal availability calendar</h3>
+        <p class="text-ink-mid font-body text-[15px] leading-[1.7]">
+          Your clients can see what's open before they call. Open, limited, or booked — color-coded, by trip type, by day. Click an open date and it drops them into the inquiry form with the trip and date already filled in.
+        </p>
+      </div>
+
+      <div class="bg-cream p-8 reveal">
+        <h3 class="font-display font-bold text-ink text-lg mb-3">An inquiry form that works at midnight</h3>
+        <p class="text-ink-mid font-body text-[15px] leading-[1.7]">
+          Trip type, dates, party size, experience level, message. You wake up to qualified leads instead of voicemails you can't return from the river. Auto-reply sends your gear list while they wait.
+        </p>
+      </div>
+
+      <div class="bg-cream p-8 reveal">
+        <h3 class="font-display font-bold text-ink text-lg mb-3">Stripe deposit collection</h3>
+        <p class="text-ink-mid font-body text-[15px] leading-[1.7]">
+          Take a $500 deposit online when you confirm a trip. No reading credit card numbers over the phone. No chasing checks. Professional for you, easy for the client. No commissions — you keep every dollar.
+        </p>
+      </div>
+
+      <div class="bg-cream p-8 reveal">
+        <h3 class="font-display font-bold text-ink text-lg mb-3">Google visibility</h3>
+        <p class="text-ink-mid font-body text-[15px] leading-[1.7]">
+          Structured data, local SEO, and Google Business Profile optimization so you show up when someone searches "Helena fishing guide" or "Montana elk outfitter."
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- PRICING                                                    -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="pricing" class="relative bg-timber-mid overflow-hidden scroll-mt-20">
+  <!-- Golden Hour Glow -->
+  <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] h-[60%] pointer-events-none" style="background: radial-gradient(ellipse at 50% 100%, rgba(184,101,42,0.08) 0%, transparent 70%);"></div>
+
+  <div class="relative z-10 max-w-[1100px] mx-auto section-padding">
+    <div class="max-w-2xl reveal">
+      <p class="section-label text-copper mb-6">Pricing</p>
+      <h2 class="font-display font-extrabold text-cream leading-tight mb-2" style="font-size: clamp(26px, 3.5vw, 42px);">
+        Less than one day's guide fee.
+      </h2>
+      <p class="font-display font-bold text-cream text-2xl md:text-3xl mb-6">
+        $500 to build. $35&nbsp;a&nbsp;month.
+      </p>
+      <p class="text-sand-dk font-body leading-[1.7] mb-4">
+        That covers hosting, SSL, DNS, unlimited content updates, and direct access to the developer who built your site. No contracts. Month to month.
+      </p>
+      <p class="font-display font-bold text-copper text-lg italic">
+        One extra booking per season pays for your website for the entire year.
+      </p>
+    </div>
+
+    <!-- Add-ons -->
+    <div class="mt-12 reveal">
+      <p class="section-label text-stone mb-6">Add-ons</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-0.5 bg-timber rounded-[4px] overflow-hidden max-w-lg">
+        <div class="bg-timber-mid p-6">
+          <p class="font-display font-bold text-cream mb-1">Stripe deposits</p>
+          <p class="font-mono text-sm text-stone">+$250 build · no additional monthly</p>
+        </div>
+        <div class="bg-timber-mid p-6">
+          <p class="font-display font-bold text-cream mb-1">Availability calendar</p>
+          <p class="font-mono text-sm text-stone">+$250 build · no additional monthly</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- WHAT YOU DON'T GET                                         -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="bg-sand">
+  <div class="max-w-[1100px] mx-auto section-padding">
+    <div class="max-w-2xl reveal">
+      <p class="section-label text-copper mb-6">What You Don't Get</p>
+      <p class="text-ink-mid font-body leading-[1.7]">
+        No Airbnb-style commissions. No FishingBooker taking 20% of every trip. No WordPress plugin nightmares. No call center — you deal with the developer directly, and the developer deals with your site.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- COMING SOON + EMAIL SIGNUP                                 -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="signup" class="bg-cream scroll-mt-20">
+  <div class="max-w-[1100px] mx-auto section-padding">
+    <div class="max-w-xl mx-auto text-center reveal">
+      <p class="section-label text-copper mb-6">Coming Soon</p>
+      <h2 class="font-display font-extrabold text-ink leading-tight mb-6" style="font-size: clamp(26px, 3.5vw, 42px);">
+        We're building the first batch now.
+      </h2>
+      <p class="text-ink-mid font-body leading-[1.7] mb-4">
+        Packstring is currently onboarding a small number of Montana outfitters for launch. If you want to see what your site could look like — or just want to know when we're live — drop your email below.
+      </p>
+      <p class="text-ink-faded font-body leading-[1.7] mb-10">
+        No pressure. No sales pitch. Just an honest conversation about whether a new site would bring you more bookings.
+      </p>
+
+      <!-- Email Signup Form -->
+      <form
+        hx-post="https://broadwave.fireflysoftware.dev/api/subscribe"
+        hx-swap="outerHTML"
+        class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+      >
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="Your email"
+          class="form-input flex-1"
+        >
+        <input type="hidden" name="list" value="packstring">
+        <!-- Honeypot -->
+        <div style="position:absolute;left:-9999px;" aria-hidden="true">
+          <input type="text" name="website" tabindex="-1" autocomplete="off">
+        </div>
+        <button type="submit" class="btn btn-primary">Keep Me Posted</button>
+      </form>
+
+      <p class="mt-8 text-stone font-mono text-xs tracking-wider">
+        Packstring is built by Firefly Software — a Montana web development shop based in Helena.
+      </p>
+    </div>
+  </div>
+</section>
+
+{{ end }}

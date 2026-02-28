@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Surfaces */
+    --color-sand: #F2EDE4;
+    --color-sand-dk: #DED6C8;
+    --color-sand-lt: #F8F5EF;
+    --color-cream: #FAF8F3;
+
+    /* Dark Surfaces — Timber */
+    --color-timber: #1A1410;
+    --color-timber-mid: #2A2118;
+    --color-timber-lt: #3A2E22;
+    --color-timber-edge: #4A3D2E;
+
+    /* Ink (Text) */
+    --color-ink: #1E1A14;
+    --color-ink-mid: #3D3428;
+    --color-ink-faded: #6B5F50;
+    --color-stone: #8A7E6E;
+
+    /* Core Brand — Saddle */
+    --color-saddle: #6B3A1F;
+    --color-saddle-lt: #7E4828;
+    --color-saddle-dk: #5A3018;
+
+    /* Primary Action — Forest Green */
+    --color-forest: #2E6B45;
+    --color-forest-lt: #3A8458;
+    --color-forest-dk: #245838;
+
+    /* Wonder Accent — Copper */
+    --color-copper: #B8652A;
+    --color-copper-lt: #D07A35;
+    --color-copper-dim: rgba(184,101,42,0.15);
+    --color-copper-glow: rgba(184,101,42,0.08);
+
+    /* Supporting Colors */
+    --color-river: #3A6B6E;
+    --color-river-lt: #4A8A8E;
+    --color-sage: #5A7A52;
+    --color-sage-lt: #6E9466;
+    --color-golden: #C8900A;
+    --color-golden-lt: #E0A820;
+
+    /* Font Stacks */
+    --font-display: 'Bitter', Georgia, serif;
+    --font-body: 'Lora', Georgia, serif;
+    --font-ui: 'Barlow Semi Condensed', 'Arial Narrow', sans-serif;
+    --font-mono: 'Source Code Pro', 'Courier New', monospace;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@layer components {
+  /* Section Padding */
+  .section-padding {
+    @apply py-14 px-5 md:py-20 md:px-10;
+  }
+
+  /* Section Label (eyebrow/kicker) */
+  .section-label {
+    font-family: var(--font-ui);
+    @apply text-[11px] font-semibold uppercase tracking-[0.35em];
+  }
+
+  /* Navigation Links */
+  .nav-link {
+    font-family: var(--font-ui);
+    @apply text-sand-dk text-[13px] font-semibold uppercase tracking-[0.15em] transition-colors duration-150;
+  }
+
+  .nav-link:hover {
+    @apply text-cream;
+  }
+
+  /* Buttons */
+  .btn {
+    font-family: var(--font-ui);
+    @apply inline-block text-[13px] font-semibold uppercase tracking-[0.15em] px-6 py-3 rounded-[4px] transition-all duration-150 cursor-pointer text-center;
+  }
+
+  .btn:hover {
+    transform: translateY(-1px);
+  }
+
+  .btn-primary {
+    @apply bg-forest text-white border-none;
+  }
+
+  .btn-primary:hover {
+    @apply bg-forest-lt;
+  }
+
+  .btn-secondary {
+    @apply bg-saddle text-white border-none;
+  }
+
+  .btn-secondary:hover {
+    @apply bg-saddle-lt;
+  }
+
+  .btn-outline {
+    @apply bg-transparent text-forest border border-forest;
+  }
+
+  .btn-outline:hover {
+    @apply bg-forest text-white;
+  }
+
+  .btn-outline-light {
+    @apply bg-transparent text-cream border border-cream;
+  }
+
+  .btn-outline-light:hover {
+    @apply bg-cream/10;
+  }
+
+  .btn-sm {
+    @apply text-[12px] px-4 py-2;
+  }
+
+  .btn-lg {
+    @apply text-[14px] px-8 py-4;
+  }
+
+  /* Form Inputs */
+  .form-input {
+    @apply bg-cream border border-sand-dk rounded-[4px] px-4 py-3 font-body text-ink text-[15px] transition-all duration-150;
+  }
+
+  .form-input::placeholder {
+    @apply text-stone;
+  }
+
+  .form-input:focus {
+    @apply outline-none border-forest;
+    box-shadow: 0 0 0 2px rgba(46, 107, 69, 0.2);
+  }
+
+  /* Scroll Reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+}
+
+/* Alpine.js cloak */
+[x-cloak] {
+  display: none !important;
+}

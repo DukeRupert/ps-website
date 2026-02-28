@@ -1,0 +1,23 @@
+# Build output
+bin/
+tmp/
+
+# Dependencies
+node_modules/
+
+# Generated CSS
+static/css/output.css
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
